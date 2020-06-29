@@ -1,0 +1,13 @@
+iType: AWS::DataPipeline::Pipeline
+Properties: 
+  Activate: Boolean
+  Description: String
+  Name: String
+  ParameterObjects: 
+    - ParameterObject
+  ParameterValues: 
+    - ParameterValue
+  PipelineObjects: 
+    - PipelineObject
+  PipelineTags: 
+    - PipelineTag
