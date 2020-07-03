@@ -1,0 +1,37 @@
+{
+    "variables" : {
+        "region" : "us-east-1",
+        "source_ami" : "ami-0ebc281c20e89ba4b"
+    },
+    "builders" : [
+        {
+            "type" : "amazon-ebs",
+            "profile" : "default",
+            "region" : "{{user `region`}}",
+            "instance_type" : "t2.micro",
+            "source_ami" : "{{user `source_ami`}}",
+            "ssh_username" : "ec2-user",
+            "ami_name" : "jenkins-worker-2.107.1",
+            "ami_description" : "Amazon Linux Image with Jenkins Server - worker class",
+            "run_tags" : {
+                "Name" : "packer-builder-docker"
+            },
+            "tags" : {
+                "Tool" : "Packer",
+                "Author" : "shabari.shenoy"
+            }
+        }
+    ],
+    "provisioners" : [
+        {
+            "type" : "file",
+            "source" : "COPY FILES",
+            "destination" : "COPY FILES"
+        },
+        {
+            "type" : "shell",
+            "script" : "./provision-worker-setup.sh",
+            "execute_command" : "sudo -E -S sh '{{ .Path }}'"
+        }
+    ]
+}
