@@ -14,6 +14,6 @@ data "aws_ami" "jenkins-slave" {
 
   filter {
     name   = "name"
-    values = ["jenkins-slave"]
+    values = ["jenkins-slave-1"]
   }
 }
