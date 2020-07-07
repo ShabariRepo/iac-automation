@@ -1,7 +1,7 @@
 // Bastion host launch configuration
 resource "aws_launch_configuration" "bastion_conf" {
-  name            = "bastion"
-  image_id        = data.aws_ami.bastion.id //"${data.aws_ami.bastion.id}" old way
+  name            = "bastion1"
+  image_id        = data.aws_ami.bastion1.id //"${data.aws_ami.bastion.id}" old way
   instance_type   = var.bastion_instance_type //"${var.bastion_instance_type}" old way
   key_name        = var.bastion_key_name //"${var.bastion_key_name}"
   security_groups = flatten([aws_security_group.bastion_host.id]) //"${aws_security_group.bastion_host.id}" old way

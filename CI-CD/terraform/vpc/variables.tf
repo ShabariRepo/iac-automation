@@ -1,10 +1,12 @@
 //Global variables
 variable "region" {
   description = "AWS region"
+  default     = "us-east-1"
 }
 
 variable "shared_credentials_file" {
   description = "AWS credentials file path"
+  default     = "~/.aws/credentials"
 }
 
 variable "aws_profile" {
@@ -22,13 +24,13 @@ variable "bastion_key_name" {
 variable "availability_zones" {
   type        = list(string)
   description = "List of Availability Zones"  
-  default     = ["us-east-1a] //,us-east-1c,us-east-1d"]
+  default     = ["us-east-1a"] //,us-east-1c,us-east-1d"]
 }
 
 // Default variables
 variable "vpc_name" {
   description = "VPC name"
-  default     = "devops-pipeline-automation"
+  default     = "devops-pipeline-automation1"
 }
 
 variable "cidr_block" {
