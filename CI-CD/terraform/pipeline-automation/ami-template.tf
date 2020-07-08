@@ -17,3 +17,13 @@ data "aws_ami" "jenkins-slave" {
     values = ["jenkins-slave-1"]
   }
 }
+
+data "aws_ami" "nexus" {
+  most_recent = true
+  owners      = ["self"]
+
+  filter {
+    name   = "name"
+    values = ["nexus-3.24.0-02"]
+  }
+}

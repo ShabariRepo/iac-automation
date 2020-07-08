@@ -1,15 +1,17 @@
-// Global variables
-
+//Global variables
 variable "region" {
   description = "AWS region"
+  default     = "us-east-1"
 }
 
 variable "shared_credentials_file" {
   description = "AWS credentials file path"
+  default     = "~/.aws/credentials"
 }
 
 variable "aws_profile" {
   description = "AWS profile"
+  default     = "default"
 }
 
 variable "bastion_sg_id" {

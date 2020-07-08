@@ -7,7 +7,7 @@ output "Public_Subnets" {
 }
 
 output "Private_Subnets" {
-  value = aws_subnet.private_subnets.*.id
+  value =  "${aws_subnet.private_subnets.*.id}" //aws_subnet.private_subnets.*.id
 }
 
 output "Bastion_DNS" {

@@ -25,7 +25,7 @@ resource "aws_security_group" "jenkins_master_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name   = "jenkins_master_sg"
     Author = "shabari.shenoy"
     Tool   = "Terraform"
@@ -51,7 +51,7 @@ resource "aws_security_group" "jenkins_slaves_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name   = "jenkins_slaves_sg"
     Author = "shabari.shenoy"
     Tool   = "Terraform"
@@ -77,7 +77,7 @@ resource "aws_security_group" "elb_jenkins_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name   = "elb_jenkins_sg"
     Author = "shabari.shenoy"
     Tool   = "Terraform"
@@ -119,7 +119,7 @@ resource "aws_security_group" "nexus_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name   = "nexus_sg"
     Author = "shabari.shenoy"
     Tool   = "Terraform"
@@ -145,7 +145,7 @@ resource "aws_security_group" "elb_nexus_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name   = "elb_nexus_sg"
     Author = "shabari.shenoy"
     Tool   = "Terraform"
@@ -171,7 +171,7 @@ resource "aws_security_group" "elb_registry_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name   = "elb_registry_sg"
     Author = "shabari.shenoy"
     Tool   = "Terraform"

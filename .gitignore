@@ -179,3 +179,12 @@ override.tf.json
 # example: *tfplan*
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform,ansible,packer,python
+# custom test files you dont want getting out
+CI-CD/terraform/vpc2/good-outputs.txt
+CI-CD/terraform/pipeline-automation/good-outputs.txt
+CI-CD/terraform/pipeline-automation/variables-test.tf
+CI-CD/terraform/vpc/vpc-plan.tfplan
+CI-CD/terraform/pipeline-automation/variables.tfvars.bak
+CI-CD/terraform/pipeline-automation/security_groups.tf.bak
+CI-CD/terraform/pipeline-automation/og-pipeline-plan.txt
+CI-CD/terraform/vpc2/vpc-plan.tfplan
